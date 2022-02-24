@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
+  let [input] = useState(<input type="text"/>);
+  let [input_wrap] = useState(
+  <ul className="input_wrap">
+    <li>{ input }</li>
+    <li>{ input }</li>
+    <li>{ input }</li>
+    <li>{ input }</li>
+    <li>{ input }</li>
+  </ul>);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="header">
+
       </header>
+      <main className="main">
+        <div className="container">
+          <ul>
+            <li>{ input_wrap }</li>
+            <li>{ input_wrap }</li>
+            <li>{ input_wrap }</li>
+            <li>{ input_wrap }</li>
+            <li>{ input_wrap }</li>
+          </ul>
+        </div>
+      </main>
     </div>
   );
 }
