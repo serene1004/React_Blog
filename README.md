@@ -1,3 +1,1 @@
-React Study
-
-React Wordle
+# React Study
