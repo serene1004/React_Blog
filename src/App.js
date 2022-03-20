@@ -14,12 +14,6 @@ function App() {
     newArray[0] = 'Hello World'
     studyListFn(newArray);
   }
-
-  // function changeLike () {
-  //   let newArry = [...like];
-  //   newArry[0] = 1;
-  //   likeFn(newArry)
-  // }
   
   return (
     <div className="App">
@@ -51,10 +45,29 @@ function App() {
           <div className="btn-wrap">
             <button type="button" className="change-btn" onClick={changeList}>바꿔!</button>
           </div>
+          <Modal/>
         </div>
       </main>
     </div>
   );
+}
+
+// component를 만들어서 사용하면 좋은것들.
+// 반복적으로 사용하는 HTML덩어리들
+// 자주 변경되는 HTMl UI들
+// 다른페이지를 만들때도 컴포넌트로 만듬
+
+// component를 많이 만들었을때 단점
+// state쓸때 복잡해짐
+// 상위 component에서 만든 state를 사용하려면 props문법을 이용해야함
+function Modal () {
+  return (
+    <div className="modal">
+      <h2>제목</h2>
+      <p>날짜</p>
+      <div>내용</div>
+    </div>
+  )
 }
 
 export default App;
